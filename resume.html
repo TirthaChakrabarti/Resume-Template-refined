@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="resume.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="main">
+
+        <div id="search-and-button">
+
+            <aside id="button-section">
+                <button class="button" id="previous" style="width: 80px;" onclick="showResume('previous')">Previous</button>
+            </aside>
+
+            <div id="search">
+                <input id="search-box" type="search" onchange="showResume()" value="" placeholder="search for keywords to filter the resume">
+            </div>
+
+            <aside id="button-section">
+                <button class="button" id="next" onclick="showResume('next')" style="width: 60px">Next</button>
+            </aside>
+
+        </div>
+
+        <div id="error">
+            <i class="fas fa-frown" style="font-size: 100px"></i>
+            <p>No such results found</p>
+        </div>
+
+        <div id="resume">
+
+            <header id="header">
+
+                <div id="name-post">
+                    <h1 class="name">---Name---</h1>
+                    <h3 class="post">Applied For: </h3>
+                </div>
+                <div id="icon">
+                    <i class="fa-solid fa-user" style="font-size: 110px; position: sticky;"></i>
+                </div>
+
+            </header>
+
+            <div id="details">
+
+                <section id="side-section">
+
+                    <div class="side-section-headings">
+                        <h2>Personal Information</h2>
+                    </div>
+                    <div class="side-section-details" id="personal-info" style="margin-bottom: 20px;"></div>
+
+                    <div>
+                        <h2 class="side-section-headings">Technical Skills</h2>
+                    </div>
+                    <div>
+                        <h2 class="side-section-subsection" id="skill-domain-level"></h2>
+                    </div>
+                    <div class="side-section-details" id="technical-skills"></div>
+
+                    <div>
+                        <h2 class="side-section-headings">Hobbies</h2>
+                    </div>
+                    <div class="side-section-details" id="hobbies"></div>
+
+                </section>
+
+                <section id="details-section">
+
+                    <h2 id="experience">Work Experience in previous company</h2>
+                    <div class="pointwise-details" id="work-experience"></div>
+
+                    <h2>Projects</h2>
+                    <div class="pointwise-details" id="projects">
+                        <p>
+                            <span>Name:</span> --Description--
+                        </p>
+                    </div>
+
+                    <div>
+                        <div>
+                            <h2>Education</h2>
+                            <ul class="pointwise-details" id="education"></ul>
+                        </div>
+
+                        <h2>Intership</h2>
+                        <ul class="pointwise-details" id="internship"></ul>
+                    </div>
+
+                    <div>
+                        <h2>Achievements</h2>
+                        <ul class="pointwise-details" id="achievements"></ul>
+                    </div>
+
+                </section>
+
+            </div>
+        </div>
+    </div>
+    <script src="resume.js"></script>
+</body>
+</html>
